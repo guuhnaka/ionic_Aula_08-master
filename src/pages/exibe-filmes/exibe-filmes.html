@@ -1,0 +1,27 @@
+<!-- 
+  Copyright
+Gustavo Nakaura R.A: 816253667
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>exibe-filmes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item *ngFor="let filme of filmes">
+    <div id="container">
+    <div style="float: left">
+    <p>{{filme.titulo}}</p>
+    <p>{{filme.genero}}</p>
+    </div>
+    <div style="float: right">
+    <ion-icon name="trash" (click)="apagaFilme(filme)"></ion-icon>
+    <ion-icon name="paper" (click)="atualizaFilme(filme)"></ion-icon>
+    </div>
+    </div>
+    </ion-item>
+</ion-content>

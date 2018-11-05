@@ -1,0 +1,30 @@
+<!--  
+Copyright
+Gustavo Nakaura R.A: 816253667
+ -->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Classificação por Lançamento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.poster_path">
+      </ion-avatar>
+      <h2 class="feed_title">{{filme.title}}</h2>
+      <p>{{filme.release_date | date:'d/M/y'}}</p>
+    </ion-item>
+    <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.poster_path">
+    <ion-card-content>
+      <p>{{filme.overview}}</p>
+    </ion-card-content>
+  </ion-card>
+    
+
+</ion-content>
